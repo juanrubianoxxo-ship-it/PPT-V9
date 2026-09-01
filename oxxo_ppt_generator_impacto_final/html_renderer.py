@@ -320,8 +320,8 @@ def render(fields, sheets, images):
 
     slides.append(slide('Tienda Hermana', f'''
         <div class="sister-layout">
-            <div class="store-card sister-photo"><div class="store-label">FOTO TIENDA ESPEJO</div>{media(images.get('similar_image'), 'store-image', 'Carga la foto de la tienda espejo', 'Tienda espejo')}</div>
-            <div class="sister-name-card"><span>TIENDA ESPEJO SELECCIONADA</span><strong>{text(fields.get('book_store', 'Pendiente'))}</strong><p>{text(fields.get('similar_comments', ''), 'Sin comentarios adicionales')}</p></div>
+            <div class="store-card sister-photo"><div class="store-label">FOTO TIENDA HERMANA</div>{media(images.get('similar_image'), 'store-image', 'Carga la foto de la tienda espejo', 'Tienda espejo')}</div>
+            <div class="sister-name-card"><span>TIENDA HERMANA SELECCIONADA</span><strong>{text(fields.get('book_store', 'Pendiente'))}</strong><p>{text(fields.get('similar_comments', ''), 'Sin comentarios adicionales')}</p></div>
         </div>
     ''', number=8))
 
