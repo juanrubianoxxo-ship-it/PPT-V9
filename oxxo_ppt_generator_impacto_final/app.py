@@ -435,7 +435,7 @@ with st.expander('Layout | Capex'):
     f['capex_comments'] = st.text_area('Comentarios adicionales', f.get('capex_comments', ''), key='s6_comments')
 
 with st.expander('Tienda Hermana'):
-    image_uploader('Foto de tienda espejo', 'similar_image', 's8_similar')
+    image_uploader('Foto Tienda Hermana', 'similar_image', 's8_similar')
     open_store_options = [''] + f.get('open_stores', [])
     saved_store = f.get('book_store', '') if f.get('book_store', '') in open_store_options else ''
     f['book_store'] = st.selectbox('Tienda abierta espejo — desde Book', open_store_options, index=open_store_options.index(saved_store), key='s8_open_store') if f.get('open_stores') else ''
