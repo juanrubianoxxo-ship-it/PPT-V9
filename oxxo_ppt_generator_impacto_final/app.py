@@ -420,14 +420,15 @@ for group, title in [('housing', 'Entorno | Generadores Vivienda'), ('employment
 with st.expander('Expansión | Mercado y Tráfico'):
     image_uploader('Imagen de inteligencia de expansión', 'expansion_intelligence', 's5_intel')
     st.caption('Esta imagen aparecerá únicamente en la sección integrada de Expansión | Mercado y Tráfico.')
-
-for key, label in [('housing_100', 'Viviendas a 100 m'), ('housing_300', 'Viviendas a 300 m'), ('jobs_100', 'Empleos a 100 m'), ('jobs_300', 'Empleos a 300 m')]:
-    f[key] = st.number_input(label, min_value=0.0, value=float(f.get(key, 0) or 0), key=f's5_{key}')
-f['pedestrian_15'] = st.text_input('Tráfico peatonal cada 15 min', f.get('pedestrian_15', ''), key='s5_pedestrian')
-f['vehicle_15'] = st.text_input('Tráfico vehicular cada 15 min', f.get('vehicle_15', ''), key='s5_vehicle')
-f['motorcycle_15'] = st.text_input('Tráfico de motos cada 15 min', f.get('motorcycle_15', ''), key='s5_motorcycle')
-principal_default = f.get('generator_type', GENERATOR_TYPES[0])
-f['generator_type'] = st.selectbox('Tipo de generador principal', GENERATOR_TYPES, index=GENERATOR_TYPES.index(principal_default) if principal_default in GENERATOR_TYPES else 0, key='s5_generator')
+    st.markdown('**Mercado y vivienda/empleo**')
+    for key, label in [('housing_100', 'Viviendas a 100 m'), ('housing_300', 'Viviendas a 300 m'), ('jobs_100', 'Empleos a 100 m'), ('jobs_300', 'Empleos a 300 m')]:
+        f[key] = st.number_input(label, min_value=0.0, value=float(f.get(key, 0) or 0), key=f's5_{key}')
+    principal_default = f.get('generator_type', GENERATOR_TYPES[0])
+    f['generator_type'] = st.selectbox('Tipo de generador principal', GENERATOR_TYPES, index=GENERATOR_TYPES.index(principal_default) if principal_default in GENERATOR_TYPES else 0, key='s5_generator')
+    st.markdown('**Tráficos cada 15 minutos**')
+    f['pedestrian_15'] = st.text_input('Tráfico peatonal', f.get('pedestrian_15', ''), key='s5_pedestrian')
+    f['vehicle_15'] = st.text_input('Tráfico vehicular', f.get('vehicle_15', ''), key='s5_vehicle')
+    f['motorcycle_15'] = st.text_input('Tráfico de motos', f.get('motorcycle_15', ''), key='s5_motorcycle')
 
 with st.expander('Layout | Capex'):
     image_uploader('Foto de layout / CAPEX', 'layout_image', 's6_layout')
