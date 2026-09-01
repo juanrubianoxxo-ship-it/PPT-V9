@@ -485,11 +485,21 @@ a { color:var(--red); font-weight:800; text-decoration:none; }
     .generator-grid-large .generator-name { font-size:12pt; white-space:normal; }
     .generator-grid-large .generator-type { font-size:9pt; }
     .generator-grid-large .generator-copy strong { font-size:22pt; }
-    .expansion-main-layout { display:grid; grid-template-columns:43% 57%; gap:.25in; height:5.55in; }
-    .expansion-main-photo { height:5.55in; }
+    .expansion-main-layout { display:grid; grid-template-columns:38% 62%; gap:.28in; height:5.65in; }
+    .expansion-main-photo { height:5.65in; }
     .expansion-main-image { display:block; width:100%; height:100%; object-fit:contain; object-position:center; background:#F4F1EA; }
     .expansion-main-panel { min-width:0; padding:.02in 0; }
-    .expansion-main-panel small { display:block; margin-top:.04in; color:var(--muted); font-size:7pt; }
+    .expansion-main-panel .kpi-grid { gap:.14in; }
+    .expansion-main-panel .kpi-grid > div { min-height:1.18in; padding:.16in .18in; }
+    .expansion-main-panel .kpi-grid span { font-size:9pt; letter-spacing:.08em; }
+    .expansion-main-panel .kpi-grid strong { margin-top:.08in; font-size:30pt; line-height:1; }
+    .expansion-main-panel small { display:block; margin-top:.06in; color:var(--muted); font-size:9pt; }
+    .expansion-main-panel .traffic-strip { margin:.22in 0 .18in; padding:.16in .18in; font-size:10pt; }
+    .expansion-main-panel .traffic-strip span { font-size:9pt; }
+    .expansion-main-panel .traffic-strip b { font-size:16pt; }
+    .expansion-main-panel .market-share { padding:.16in .18in; gap:.16in; }
+    .expansion-main-panel .market-share span { font-size:8pt; }
+    .expansion-main-panel .market-share strong { margin-top:.06in; font-size:23pt; }
     .generator-page-heading { display:flex; justify-content:space-between; align-items:end; margin-bottom:.12in; padding-bottom:.08in; border-bottom:2px solid var(--orange); }
     .generator-page-heading span { color:var(--muted); font-size:7pt; font-weight:900; letter-spacing:.12em; }
     .generator-page-heading strong { color:var(--red); font-size:12pt; }
